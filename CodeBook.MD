@@ -36,7 +36,64 @@ For each record it is provided:
 Variables
 ====================
 
+1# Merge the training and the test sets to create one data set.
 
+After setting the source directory for the files, read into tables the data located in
+
+features.txt
+activity_labels.txt
+subject_train.txt
+x_train.txt
+y_train.txt
+subject_test.txt
+x_test.txt
+y_test.txt
+Assign column names and merge to create one data set.
+
+# 1&3. Merge the training and the test sets to create one data set.
+
+#class labels with their activity name
+activity_labels
+
+#List of all features
+features
+
+
+#subject who performed the activity for each window sample. # Its range is from 1 to 30. 
+subject_test
+subject_train
+
+#Test set & Train set.
+X_test 
+X_train
+
+#Test labels & Train labels
+y_test
+y_train
+
+# update values with correct activity names # Uses descriptive activity names to name the activities in the data set
+# correct column name
+# Combine  test data
+test_data
+# Combine training  data
+train_data 
+# Combine training and test data to create a final data set
+all_data 
+
+# 2. Extract only the measurements on the mean and standard deviation for each measurement. 
+#Subset finalData
+all_data_sub
+
+# 4. Appropriately label the data set with descriptive activity names.
+
+# 5. From the data set in step 4, creates a second, independent tidy data set
+# with the average of each variable for each activity and each subject.
+
+data_copy
+#Order
+data_copy <-data_copy[order(data_copy$subject,data_copy$activity),]
+#write.table
+tidy_data.txt
 
 
 
