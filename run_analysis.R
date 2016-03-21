@@ -88,5 +88,3 @@ data_copy <-data_copy[order(data_copy$subject,data_copy$activity),]
 write.table(data_copy, file = "tidy_data.txt",row.name=FALSE)
 
 
-library(knitr)
-knit2html("codebook.Rmd");
